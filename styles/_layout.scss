@@ -1,0 +1,50 @@
+// Container
+.container {
+    margin: 0 auto;
+    max-width: 80%;
+
+}
+
+// Header
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-dark-blue-top-bg);
+    padding-top: 4rem;
+
+    &__title, 
+    &__toggle-text{
+        color: var(--white-text);
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__followers {
+        color: var(--desaturated-blue-text);
+        font-weight: var(--font-bold);
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+}
+
+// Main Content
+.media-data {
+    background-color: var(--very-dark-blue-bg);
+}
+
+// Media Card Container
+.media-data__followers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.media-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,60 @@
+// Toggle Button
+
+// Media Card
+.media-card {
+    border-radius: 4px;
+    background-color: var(--dark-desaturated-blue-card-bg);
+    width: 19%;
+    height: 15rem;
+    padding: 2rem 0; 
+    
+    &__account-name {
+
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url(../images/icon-facebook.svg);
+            margin-right: 0.8rem;
+        }
+    }
+
+    &__account-name-link {
+        color: var(--desaturated-blue-text);
+        text-decoration: none;
+    }
+
+    &__total-followers {
+        text-align: center;
+        margin: 0.8rem 0;
+    }
+
+    &__current-followers {
+        font-size: 3.5rem;
+        color: var(--white-text);
+    }
+
+    &__followers-text {
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        color: var(--white-text);
+        font-weight: var(--font-thin);
+    }
+
+    &__gain-loss-followers {
+        color: var(--primary-lime-green);
+
+        display: flex;
+            align-items: center;
+
+        &::before {
+            content: url(../images/icon-up.svg);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__followers {
+        margin-right: 0.2rem;
+    }
+}

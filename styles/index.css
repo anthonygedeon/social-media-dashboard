@@ -1,0 +1,161 @@
+:root {
+  --primary-lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  --dark-theme-toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --light-theme-toggle: hsl(230, 22%, 74%);
+  --very-dark-blue-bg: hsl(230, 17%, 14%);
+  --very-dark-blue-top-bg: hsl(232, 19%, 15%);
+  --dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
+  --desaturated-blue-text: hsl(228, 34%, 66%);
+  --white-text: hsl(0, 0%, 100%);
+  --white-bg:hsl(0, 0%, 100%);
+  --very-pale-blue-top-bg-pattern: hsl(225, 100%, 98%);
+  --light-grayish-blue-card-bg: hsl(227, 47%, 96%);
+  --dark-grayish-blue-text: hsl(228, 12%, 44%);
+  --very-dark-blue-Text: hsl(230, 17%, 14%);
+  --font-size: 14px;
+  --font-thin: 400;
+  --font-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--very-dark-blue-top-bg);
+  padding-top: 4rem;
+}
+
+.dashboard__title, .dashboard__toggle-text {
+  color: var(--white-text);
+}
+
+.dashboard__title {
+  font-size: 2rem;
+}
+
+.dashboard__followers {
+  color: var(--desaturated-blue-text);
+  font-weight: var(--font-bold);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.media-data {
+  background-color: var(--very-dark-blue-bg);
+}
+
+.media-data__followers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.media-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.media-card {
+  border-radius: 4px;
+  background-color: var(--dark-desaturated-blue-card-bg);
+  width: 19%;
+  height: 15rem;
+  padding: 2rem 0;
+}
+
+.media-card__account-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.media-card__account-name::before {
+  content: url(../images/icon-facebook.svg);
+  margin-right: 0.8rem;
+}
+
+.media-card__account-name-link {
+  color: var(--desaturated-blue-text);
+  text-decoration: none;
+}
+
+.media-card__total-followers {
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+.media-card__current-followers {
+  font-size: 3.5rem;
+  color: var(--white-text);
+}
+
+.media-card__followers-text {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--white-text);
+  font-weight: var(--font-thin);
+}
+
+.media-card__gain-loss-followers {
+  color: var(--primary-lime-green);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.media-card__gain-loss-followers::before {
+  content: url(../images/icon-up.svg);
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.media-card__followers {
+  margin-right: 0.2rem;
+}
+/*# sourceMappingURL=index.css.map */
