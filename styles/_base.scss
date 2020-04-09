@@ -6,11 +6,11 @@
     // - Logo colors
     --facebook: hsl(195, 100%, 50%);
     --twitter: hsl(203, 89%, 53%);
-    --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --youtube: hsl(348, 97%, 39%);
 
     // - toggle button mode
-    --dark-theme-toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --dark-theme-toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     --light-theme-toggle: hsl(230, 22%, 74%);
 
     // - dark theme
@@ -27,6 +27,10 @@
     --dark-grayish-blue-text: hsl(228, 12%, 44%);
     --very-dark-blue-Text: hsl(230, 17%, 14%);
 
+    // - active state
+    --dark-mode-active: hsl(230, 27%, 29%);
+    --light-mode-active: hsl(231, 33%, 84%);
+
     // Fonts
     --font-size: 14px;
     --font-thin: 400;
@@ -39,4 +43,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+}
+
+// body background color - Temporary fix
+body {
+    background: linear-gradient(-180deg, var(--very-dark-blue-top-bg) 27%, var(--very-dark-blue-bg) 0%);
+    height: 100vh;
 }

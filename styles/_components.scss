@@ -1,12 +1,58 @@
 // Toggle Button
+.dashboard {
+
+    &__toggle-mode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__toggle-text {
+        color: var(--desaturated-blue-text);
+        font-weight: var(--font-bold);
+        margin-right: 1rem;
+    }
+
+    &__toggle-container {
+        width: 55px;
+        height: 25px;
+        border-radius: 1rem;
+        background: var(--dark-theme-toggle);
+        padding: 0 0.2rem;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__toggle-button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--very-dark-blue-bg);
+        transition: transform 0.3s cubic-bezier(0.25, 0.35, 0, 1.06);
+
+        &--right {
+            transform: translateX(29px);
+        }
+    }
+}
 
 // Media Card
 .media-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     border-radius: 4px;
     background-color: var(--dark-desaturated-blue-card-bg);
-    width: 19%;
-    height: 15rem;
+    width: 23%;
+    height: 17rem;
     padding: 2rem 0; 
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
     
     &__account-name {
 
@@ -17,6 +63,11 @@
             content: url(../images/icon-facebook.svg);
             margin-right: 0.8rem;
         }
+
+    }
+
+    &:hover {
+        background-color: var(--dark-mode-active);
     }
 
     &__account-name-link {
@@ -30,31 +81,198 @@
     }
 
     &__current-followers {
-        font-size: 3.5rem;
+        font-size: 4rem;
         color: var(--white-text);
     }
 
     &__followers-text {
         text-transform: uppercase;
+        font-size: 0.8rem;
         letter-spacing: 0.5rem;
-        color: var(--white-text);
+        color: var(--desaturated-blue-text);
         font-weight: var(--font-thin);
     }
 
     &__gain-loss-followers {
         color: var(--primary-lime-green);
-
+        font-weight: var(--font-bold);
         display: flex;
-            align-items: center;
+        align-items: center;
 
         &::before {
             content: url(../images/icon-up.svg);
             display: inline-block;
             margin-right: 0.5rem;
+            margin-bottom: 0.3rem;
         }
     }
 
     &__followers {
         margin-right: 0.2rem;
     }
+}
+
+.media-card:nth-child(1) {
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--facebook);
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    &__account-name {
+
+        &::before {
+            content: url(../images/icon-facebook.svg);
+            margin-right: 0.5rem;
+        }
+
+    }
+}
+
+.media-card:nth-child(2) {
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--twitter);
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    .media-card__account-name {
+
+        &::before {
+            content: url(../images/icon-twitter.svg);
+            margin-right: 0.5rem;
+        }
+
+    }
+}
+
+.media-card:nth-child(3) {
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--instagram);
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    .media-card__account-name {
+
+        &::before {
+            content: url(../images/icon-instagram.svg);
+            margin-right: 0.5rem;
+        }
+
+    }
+}
+
+.media-card:nth-child(4) {
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--youtube);
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    .media-card__account-name {
+
+        &::before {
+            content: url(../images/icon-youtube.svg);
+            margin-right: 0.5rem;
+        }
+
+    }
+
+    .media-card__gain-loss-followers {
+        color: var(--bright-red);
+        font-weight: var(--font-bold);
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url(../images/icon-down.svg);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+// Overview for Today component
+
+.media-data__today {
+    color: var(--white-text);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.media-card-today {
+    border-radius: 4px;
+    background-color: var(--dark-desaturated-blue-card-bg);
+    width: 100%;
+    height: 10rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        background-color: var(--dark-mode-active);
+    }
+
+
+
+    &__action {
+        color: var(--desaturated-blue-text);
+        font-weight: var(--font-bold);
+
+    }
+
+    &__amount {
+        font-size: 2.5rem;
+        color: var(--white-text);
+        font-weight: var(--font-bold);
+    }
+
+    &__gain-loss {
+        color: var(--primary-lime-green);
+        font-weight: var(--font-bold);
+        display: flex;
+        align-items: center;
+        &::before {
+            content: url(../images/icon-up.svg);
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__gain-loss--down {
+        color: var(--bright-red);
+        font-weight: var(--font-bold);
+        display: flex;
+        align-items: center;
+        &::before {
+            content: url(../images/icon-down.svg);
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.2rem;
+        }
+    }
+    
 }
