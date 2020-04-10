@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding-top: 4rem;
     margin-bottom: 3rem;
 
@@ -35,9 +36,10 @@
 
     &__responses {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: 1fr 1fr;
         grid-gap: 2rem;
+        justify-content: center;
 
     }
 }
