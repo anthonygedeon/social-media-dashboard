@@ -38,6 +38,29 @@ body {
   height: 100vh;
 }
 
+@media screen and (max-width: 400px) {
+  .container {
+    max-width: 85% !important;
+  }
+  .dashboard__intro {
+    border-bottom: 1px solid var(--dark-desaturated-blue-card-bg);
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .dashboard__title {
+    font-size: 1.4rem !important;
+  }
+  .dashboard__followers {
+    margin-bottom: 1rem;
+  }
+  .dashboard__toggle-mode {
+    width: 100%;
+  }
+  .media-card-today:last-child {
+    margin-bottom: 2rem;
+  }
+}
+
 .container {
   margin: 0 auto;
   max-width: 75%;

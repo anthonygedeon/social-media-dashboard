@@ -50,3 +50,38 @@ body {
     background: linear-gradient(-180deg, var(--very-dark-blue-top-bg) 27%, var(--very-dark-blue-bg) 0%);
     height: 100vh;
 }
+
+@media screen and (max-width: 400px) {
+
+    .container {
+        max-width: 85% !important;
+    }
+
+    .dashboard {
+
+        &__intro {
+            border-bottom: 1px solid var(--dark-desaturated-blue-card-bg);
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 1.4rem !important;
+        }
+
+        &__followers {
+            margin-bottom: 1rem;
+        }
+
+        &__toggle-mode {
+            width: 100%;
+        }
+    }
+    
+    .media-card-today:last-child {
+        margin-bottom: 2rem;
+    }
+    
+    
+
+}
