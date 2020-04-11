@@ -135,22 +135,25 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .container {
-    max-width: 85% !important;
+  .container--mobile {
+    max-width: 85%;
   }
   .media-data__today {
     margin-top: 2rem;
   }
-  .dashboard {
-    padding-top: 3rem !important;
+  .media-card {
+    margin-bottom: 2rem;
+  }
+  .dashboard--mobile {
+    padding-top: 3rem;
   }
   .dashboard__intro {
     border-bottom: 1px solid var(--desaturated-blue-text);
     margin-bottom: 1rem;
     width: 100%;
   }
-  .dashboard__title {
-    font-size: 1.4rem !important;
+  .dashboard__title--mobile {
+    font-size: 1.4rem;
   }
   .dashboard__followers {
     margin-bottom: 1rem;

@@ -83,17 +83,23 @@
 //-------------------------------------------
 @media screen and (max-width: 1200px) {
 
-    .container {
-        max-width: 85% !important;
+    .container--mobile {
+        max-width: 85%;
     }
 
     .media-data__today {
         margin-top: 2rem;
     }
 
+    .media-card {
+        margin-bottom: 2rem;
+    }
+
     .dashboard {
 
-        padding-top: 3rem !important;
+        &--mobile {
+            padding-top: 3rem;
+        }
 
         &__intro {
             border-bottom: 1px solid var(--desaturated-blue-text);
@@ -101,8 +107,8 @@
             width: 100%;
         }
 
-        &__title {
-            font-size: 1.4rem !important;
+        &__title--mobile {
+            font-size: 1.4rem;
         }
 
         &__followers {
