@@ -74,79 +74,19 @@
         }
     }
 
-    &--facebook {
-        &::before {
-            background-color: var(--facebook);
+    @each $order, $logo in $logo-images {
+        &:nth-child(#{$order}) {
+            &::before {
+                background: var(--#{$logo});
+            }
         }
 
-        &__account-name {
-
+        &:nth-child(#{$order}) &__account-name {
             &::before {
-                content: url(../images/icon-facebook.svg);
+                content: url(../images/icon-#{$logo}.svg);
                 margin-right: 0.5rem;
             }
-    
         }
-    
-    }
-    &--twitter {
-
-        &::before {
-            background-color: var(--twitter);
-        }
-
-        &__account-name {
-
-            &::before {
-                content: url(../images/icon-twitter.svg);
-                margin-right: 0.5rem;
-            }
-    
-        }
-    }
-
-    &--instagram {
-
-        &::before {
-            background: var(--instagram);
-        }
-
-
-        &__account-name {
-
-            &::before {
-                content: url(../images/icon-instagram.svg);
-                margin-right: 0.5rem;
-            }
-    
-        }
-    }
-
-    &--youtube {
-
-        &::before {
-            background-color: var(--youtube);
-        }
-        &__account-name {
-
-            &::before {
-                content: url(../images/icon-youtube.svg);
-                margin-right: 0.5rem;
-            }
-    
-        }
-    }
-
-
-    &__account-name {
-
-        @include vertical-center;
-
-        &::before {
-            content: url(../images/icon-facebook.svg);
-            margin-right: 0.8rem;
-        }
-
     }
 
     &:hover {
