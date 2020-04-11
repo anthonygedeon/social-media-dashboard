@@ -81,10 +81,14 @@
 //-------------------------------------------
 // MEDIA QUERIES
 //-------------------------------------------
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 
     .container {
         max-width: 85% !important;
+    }
+
+    .media-data__today {
+        margin-top: 2rem;
     }
 
     .dashboard {
@@ -110,7 +114,7 @@
         }
     }
     
-    .media-card-today:last-child {
+    .overview-card:last-child {
         margin-bottom: 2rem;
     }
 }

@@ -6,7 +6,7 @@
     --primary-lime-green: hsl(163, 72%, 41%);
     --bright-red: hsl(356, 69%, 56%);
 
-    // - Logo colors
+    // - logo colors
     --facebook: hsl(195, 100%, 50%);
     --twitter: hsl(203, 89%, 53%);
     --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
@@ -46,11 +46,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
 // body background color - Temporary fix
 body {
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(-180deg, var(--very-dark-blue-top-bg) 27%, var(--very-dark-blue-bg) 0%);
     height: 100vh;
 }
@@ -67,6 +67,24 @@ body {
 @mixin vertical-center() {
     display: flex;
     align-items: center;
+}
+
+@mixin gain-or-loss($image, $color) {
+    font-weight: var(--font-bold);
+    color: var(#{$color});
+
+    &::before {
+        content: url(../images/icon-#{$image}.svg);
+        display: inline-block;
+        margin-right: 0.5rem;
+
+        @if $image == 'up' {
+            margin-bottom: 0.2rem;
+        } @else {
+            margin-bottom:  0.3rem;
+        }
+    }
+
 }
 
 //-------------------------------------------
