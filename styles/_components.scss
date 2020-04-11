@@ -1,9 +1,14 @@
-// Toggle Button
+//-------------------------------------------
+// DASHBOARD
+//-------------------------------------------
 .dashboard {
 
+    --width-of-toggle-container: 55px;
+    --total-padding-toggle-container: 0.4rem;
+    --button-width: 20px;
+
     &__toggle-mode {
-        display: flex;
-        justify-content: space-between;
+        @include space-between;
         align-items: center;
     }
 
@@ -14,16 +19,14 @@
     }
 
     &__toggle-container {
-        width: 55px;
+        width: var(--width-of-toggle-container);
         height: 25px;
         border-radius: 1rem;
         background: var(--dark-theme-toggle);
         padding: 0 0.2rem;
         cursor: pointer;
 
-        display: flex;
-        align-items: center;
-
+        @include vertical-center;
     }
 
     &__toggle-button {
@@ -34,16 +37,17 @@
         transition: transform 0.3s cubic-bezier(0.25, 0.35, 0, 1.06);
 
         &--right {
-            transform: translateX(29px);
+            transform: translateX(calc((var(--width-of-toggle-container) - var(--total-padding-toggle-container)) - var(--button-width)));
         }
     }
 }
 
-// Media Card
+//-------------------------------------------
+// MEDIA CARD
+//-------------------------------------------
 .media-card {
-    display: flex;
+    @include space-between;
     flex-direction: column;
-    justify-content: space-between;
 
     border-radius: 4px;
     background-color: var(--dark-desaturated-blue-card-bg);
@@ -57,8 +61,7 @@
     
     &__account-name {
 
-        display: flex;
-        align-items: center;
+        @include vertical-center;
 
         &::before {
             content: url(../images/icon-facebook.svg);
@@ -97,8 +100,7 @@
     &__gain-loss-followers {
         color: var(--primary-lime-green);
         font-weight: var(--font-bold);
-        display: flex;
-        align-items: center;
+        @include vertical-center;
 
         &::before {
             content: url(../images/icon-up.svg);
@@ -224,7 +226,7 @@
     margin-bottom: 2rem;
 }
 
-.media-card-today {
+.overview-card {
     border-radius: 4px;
     background-color: var(--dark-desaturated-blue-card-bg);
     width: 100%;

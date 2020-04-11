@@ -1,18 +1,19 @@
-// Container
+//-------------------------------------------
+// Container/Wrapper
+//-------------------------------------------
 .container {
     margin: 0 auto;
-    max-width: 75%;
-
+    max-width: 85em;
 }
 
-// Header
+//-------------------------------------------
+// HEADER
+//-------------------------------------------
 .dashboard {
-    display: flex;
-    justify-content: space-between;
+    @include space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 4rem;
-    margin-bottom: 3rem;
+    padding: 4rem 0 3rem 0;
 
     &__title, 
     &__toggle-text{
@@ -31,8 +32,25 @@
     }
 }
 
-// Main Content
+//-------------------------------------------
+// MAIN CONTENT
+//-------------------------------------------
 .media-data {
+    
+    //-------------------------------------------
+    // MEDIA CARD FOLLOWERS
+    //-------------------------------------------
+    &__followers {
+        @include space-between;
+        flex-wrap: wrap;
+        margin-bottom: 4em;
+
+        .media-card {
+            @include space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
     &__responses {
         display: grid;
@@ -40,38 +58,59 @@
         grid-template-rows: 1fr 1fr;
         grid-gap: 2rem;
         justify-content: center;
+    }
 
+    //-------------------------------------------
+    // MEDIA CARD OVERVIEW
+    //-------------------------------------------
+    .overview-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1.7rem;
+
+        &__media-icon, 
+        &__gain-loss {
+            justify-self: end;
+        }
     }
 }
 
-// Media Card Container
-.media-data__followers {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 4em;
-}
+//-------------------------------------------
+// MEDIA QUERIES
+//-------------------------------------------
+@media screen and (max-width: 800px) {
 
-.media-card-today {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1.7rem;
-
-    &__media-icon {
-        justify-self: end;
+    .container {
+        max-width: 85% !important;
     }
-    &__gain-loss {
-        justify-self: end;
 
+    .dashboard {
+
+        padding-top: 3rem !important;
+
+        &__intro {
+            border-bottom: 1px solid var(--desaturated-blue-text);
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 1.4rem !important;
+        }
+
+        &__followers {
+            margin-bottom: 1rem;
+        }
+
+        &__toggle-mode {
+            width: 100%;
+        }
     }
-}
-
-.media-card {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+    
+    .media-card-today:last-child {
+        margin-bottom: 2rem;
+    }
 }

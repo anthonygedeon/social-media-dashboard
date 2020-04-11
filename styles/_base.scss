@@ -1,3 +1,6 @@
+//-------------------------------------------
+// VARIABLES
+//-------------------------------------------
 :root {
     // Color Variables
     --primary-lime-green: hsl(163, 72%, 41%);
@@ -32,12 +35,13 @@
     --light-mode-active: hsl(231, 33%, 84%);
 
     // Fonts
-    --font-size: 14px;
     --font-thin: 400;
     --font-bold: 700;
 }
 
-// resets
+//-------------------------------------------
+// RESETS
+//-------------------------------------------
 * {
     margin: 0;
     padding: 0;
@@ -51,39 +55,20 @@ body {
     height: 100vh;
 }
 
-@media screen and (max-width: 800px) {
-
-    .container {
-        max-width: 85% !important;
-    }
-
-    .dashboard {
-
-        padding-top: 3rem !important;
-
-        &__intro {
-            border-bottom: 1px solid var(--desaturated-blue-text);
-            margin-bottom: 1rem;
-            width: 100%;
-        }
-
-        &__title {
-            font-size: 1.4rem !important;
-        }
-
-        &__followers {
-            margin-bottom: 1rem;
-        }
-
-        &__toggle-mode {
-            width: 100%;
-        }
-    }
-    
-    .media-card-today:last-child {
-        margin-bottom: 2rem;
-    }
-    
-    
-
+//-------------------------------------------
+// MIXINS
+//-------------------------------------------
+@mixin space-between() {
+    display: flex;
+    justify-content: space-between;
 }
+
+
+@mixin vertical-center() {
+    display: flex;
+    align-items: center;
+}
+
+//-------------------------------------------
+// SASS VARIABLES
+//-------------------------------------------
