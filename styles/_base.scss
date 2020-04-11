@@ -51,7 +51,7 @@ body {
     height: 100vh;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
 
     .container {
         max-width: 85% !important;
@@ -59,8 +59,10 @@ body {
 
     .dashboard {
 
+        padding-top: 3rem !important;
+
         &__intro {
-            border-bottom: 1px solid var(--dark-desaturated-blue-card-bg);
+            border-bottom: 1px solid var(--desaturated-blue-text);
             margin-bottom: 1rem;
             width: 100%;
         }
