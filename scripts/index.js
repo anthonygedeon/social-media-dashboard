@@ -2,26 +2,10 @@ const toggleBtn = document.querySelector('.dashboard__toggle-container');
 
 let currentTheme = true;
 
-const colorTheme = {
-	getColors: {
-		darkBlueTop: getComputedStyle(
-			document.documentElement
-		).getPropertyValue('--very-dark-blue-bg'),
-		darkBlueBg: getComputedStyle(document.documentElement).getPropertyValue(
-			'--very-dark-blue-top-bg'
-		),
-		desaturatedBlueCard: getComputedStyle(
-			document.documentElement
-		).getPropertyValue('--dark-desaturated-blue-card-bg'),
-		desaturatedBlueCardText: getComputedStyle(
-			document.documentElement
-		).getPropertyValue('--desaturated-blue-text'),
-		whiteText: getComputedStyle(document.documentElement).getPropertyValue(
-			'--white-text'
-		),
-	},
-};
-
+/**
+ * Changes the color of the theme
+ @todo refactor 
+ */
 function switchColorTheme() {
 	if (currentTheme) {
 		currentTheme = false;
@@ -97,8 +81,9 @@ function switchColorTheme() {
 toggleBtn.addEventListener('click', switchColorTheme);
 
 
-/***************************
+/**********************************************************
     Social Media API's
-***************************/
+**********************************************************/
+
 
 
